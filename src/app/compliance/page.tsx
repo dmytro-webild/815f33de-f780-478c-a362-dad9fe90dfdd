@@ -8,11 +8,12 @@ import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 
 export default function CompliancePage() {
   return (
-    <ThemeProvider>
+    <ThemeProvider defaultButtonVariant="hover-magnetic" defaultTextAnimation="entrance-slide" borderRadius="rounded" contentWidth="medium" sizing="medium" background="circleGradient" cardStyle="glass-elevated" primaryButtonStyle="gradient" secondaryButtonStyle="glass" headingFontWeight="normal">
       <ReactLenis root>
         <NavbarLayoutFloatingInline
           navItems={[{ name: "Home", id: "/" }, { name: "About Us", id: "/about" }, { name: "Careers", id: "/careers" }, { name: "FAQ", id: "/faq" }, { name: "Compliance", id: "/compliance" }, { name: "Join Now", id: "/join-now" }]}
           brandName="UTlogistics"
+          button={{ text: "Get Started" }}
         />
         <LegalSection
           layout="page"

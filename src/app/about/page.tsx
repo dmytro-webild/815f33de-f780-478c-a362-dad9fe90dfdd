@@ -8,15 +8,17 @@ import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 
 export default function AboutPage() {
   return (
-    <ThemeProvider>
+    <ThemeProvider defaultButtonVariant="hover-magnetic" defaultTextAnimation="entrance-slide" borderRadius="rounded" contentWidth="medium" sizing="medium" background="circleGradient" cardStyle="glass-elevated" primaryButtonStyle="gradient" secondaryButtonStyle="glass" headingFontWeight="normal">
       <ReactLenis root>
         <NavbarLayoutFloatingInline
           navItems={[{ name: "Home", id: "/" }, { name: "About Us", id: "/about" }, { name: "Careers", id: "/careers" }, { name: "FAQ", id: "/faq" }, { name: "Compliance", id: "/compliance" }, { name: "Join Now", id: "/join-now" }]}
           brandName="UTlogistics"
+          button={{ text: "Get Started" }}
         />
         <MediaAbout
           title="About UTlogistics"
           description="We are a premier partner of Amazon Relay, dedicated to excellence in logistics and supply chain management."
+          useInvertedBackground={false}
         />
         <FooterBaseCard
           logoText="UTlogistics"
