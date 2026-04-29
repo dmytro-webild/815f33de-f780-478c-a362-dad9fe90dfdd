@@ -34,7 +34,7 @@ export default function LandingPage() {
       navItems={[
         { name: "Home", id: "hero" },
         { name: "About", id: "about" },
-        { name: "Compliance", id: "/compliance" },
+        { name: "Careers", id: "feature" },
         { name: "Contact", id: "contact" },
         { name: "Join Now", id: "/join-now" },
       ]}
@@ -173,7 +173,7 @@ export default function LandingPage() {
       logoText="UTlogistics"
       columns={[
         { title: "Company", items: [{ label: "About Us", href: "#about" }, { label: "Careers", href: "#feature" }] },
-        { title: "Resources", items: [{ label: "FAQ", href: "#faq" }, { label: "Compliance", href: "/compliance" }] },
+        { title: "Resources", items: [{ label: "FAQ", href: "#faq" }, { label: "Compliance", href: "#" }] },
         { title: "Contact", items: [{ label: "Join Now", href: "/join-now" }] },
       ]}
       copyrightText="© 2025 UTlogistics. MC# 123456 | DOT# 654321"
