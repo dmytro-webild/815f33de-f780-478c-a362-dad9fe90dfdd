@@ -9,11 +9,12 @@ import { Truck, LayoutDashboard, Wrench, Cpu } from "lucide-react";
 
 export default function CareersPage() {
   return (
-    <ThemeProvider>
+    <ThemeProvider defaultButtonVariant="hover-magnetic" defaultTextAnimation="entrance-slide" borderRadius="rounded" contentWidth="medium" sizing="medium" background="circleGradient" cardStyle="glass-elevated" primaryButtonStyle="gradient" secondaryButtonStyle="glass" headingFontWeight="normal">
       <ReactLenis root>
         <NavbarLayoutFloatingInline
           navItems={[{ name: "Home", id: "/" }, { name: "About Us", id: "/about" }, { name: "Careers", id: "/careers" }, { name: "FAQ", id: "/faq" }, { name: "Compliance", id: "/compliance" }, { name: "Join Now", id: "/join-now" }]}
           brandName="UTlogistics"
+          button={{ text: "Get Started" }}
         />
         <FeatureCardTwentySix
           title="Join Our Team"
@@ -24,6 +25,8 @@ export default function CareersPage() {
             { title: "Technician Roles", description: "Maintaining top-tier fleets.", buttonIcon: Wrench },
             { title: "Logistics Analyst", description: "Data-driven operations.", buttonIcon: Cpu }
           ]}
+          textboxLayout="default"
+          useInvertedBackground={false}
         />
         <FooterBaseCard
           logoText="UTlogistics"
