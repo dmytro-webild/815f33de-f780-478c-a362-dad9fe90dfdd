@@ -3,8 +3,8 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
-import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
+import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 
 export default function JoinNowPage() {
   return (
@@ -21,44 +21,46 @@ export default function JoinNowPage() {
         headingFontWeight="bold"
     >
       <ReactLenis root>
-        <NavbarLayoutFloatingInline
-          navItems={[
-            { name: "Home", id: "/" },
-            { name: "About", id: "/#about" },
-            { name: "Compliance", id: "/compliance" },
-            { name: "Contact", id: "/#contact" },
-            { name: "Join Now", id: "/join-now" },
-          ]}
-          brandName="UTlogistics"
-          button={{ text: "Join Now", href: "/join-now" }}
-        />
+        <div id="nav" data-section="nav">
+          <NavbarLayoutFloatingInline
+            navItems={[
+              { name: "Home", id: "/" },
+              { name: "About", id: "/about" },
+              { name: "Careers", id: "/careers" },
+              { name: "Contact", id: "/contact" },
+              { name: "Join Now", id: "/join-now" },
+            ]}
+            brandName="UTlogistics"
+            button={{ text: "Join Now", href: "/join-now" }}
+          />
+        </div>
 
-        <div className="pt-32 pb-20">
+        <div id="contact" data-section="contact" style={{ paddingTop: "100px" }}>
           <ContactSplitForm
             useInvertedBackground={true}
-            title="Start Your Career Today"
-            description="Join our growing team of professionals and start driving success with UTlogistics. Fill out the application below to get started."
+            title="Join UTlogistics"
+            description="Complete the form below to start your journey with us."
             inputs={[
               { name: "fullName", type: "text", placeholder: "Full Name", required: true },
               { name: "email", type: "email", placeholder: "Email Address", required: true },
               { name: "phone", type: "tel", placeholder: "Phone Number", required: true },
-              { name: "experience", type: "text", placeholder: "CDL Class / Years of Experience", required: true },
             ]}
-            textarea={{ name: "message", placeholder: "Tell us about your background and why you want to join UTlogistics.", rows: 4 }}
-            imageSrc="http://img.b2bpic.net/free-photo/truck-driver-holding-truck-key-parking_23-2148858277.jpg"
-            imageAlt="truck driver application"
+            textarea={{ name: "message", placeholder: "Let us know your interest (Driver or Dispatcher).", rows: 4 }}
+            imageSrc="http://img.b2bpic.net/free-photo/aerial-view-bridge-creek-powerlines-with-cars-road_181624-24539.jpg"
           />
         </div>
 
-        <FooterBaseCard
-          logoText="UTlogistics"
-          columns={[
-            { title: "Company", items: [{ label: "About Us", href: "/#about" }, { label: "Careers", href: "/#feature" }] },
-            { title: "Resources", items: [{ label: "FAQ", href: "/#faq" }, { label: "Compliance", href: "/compliance" }] },
-            { title: "Contact", items: [{ label: "Join Now", href: "/join-now" }] },
-          ]}
-          copyrightText="© 2025 UTlogistics. MC# 123456 | DOT# 654321"
-        />
+        <div id="footer" data-section="footer">
+          <FooterBaseCard
+            logoText="UTlogistics"
+            columns={[
+              { title: "Company", items: [{ label: "About Us", href: "/about" }, { label: "Careers", href: "/careers" }] },
+              { title: "Resources", items: [{ label: "FAQ", href: "/faq" }, { label: "Compliance", href: "#" }] },
+              { title: "Contact", items: [{ label: "Join Now", href: "/join-now" }] },
+            ]}
+            copyrightText="© 2025 UTlogistics. MC# 123456 | DOT# 654321"
+          />
+        </div>
       </ReactLenis>
     </ThemeProvider>
   );
