@@ -36,10 +36,10 @@ export default function LandingPage() {
         { name: "About", id: "about" },
         { name: "Careers", id: "feature" },
         { name: "Contact", id: "contact" },
+        { name: "Join Now", id: "/join-now" },
       ]}
       brandName="UTlogistics"
-      button={{
-        text: "Drive for Us",        href: "#contact"}}
+      button={{ text: "Join Now", href: "/join-now" }}
     />
   </div>
 
@@ -48,7 +48,7 @@ export default function LandingPage() {
       background={{ variant: "plain" }}
       title="Scaling the Future of Freight."
       description="UTlogistics offers top-tier opportunities for CDL drivers and dispatchers. Join our partnership with Amazon Relay and drive success with us."
-      buttons={[{ text: "Drive for Us", href: "#contact" }]}
+      buttons={[{ text: "Join Now", href: "/join-now" }]}
       carouselItems={[
         { id: "1", imageSrc: "http://img.b2bpic.net/free-photo/transportation-truck-delivering-cargo-container-multiple-lane-highway-generative-ai_188544-8156.jpg", imageAlt: "semi truck highway sunrise" },
         { id: "2", imageSrc: "http://img.b2bpic.net/free-photo/modern-equipped-computer-lab_23-2149241207.jpg", imageAlt: "logistics interface dashboard analytics" },
@@ -92,10 +92,10 @@ export default function LandingPage() {
       textboxLayout="default"
       useInvertedBackground={true}
       features={[
-        { title: "For CDL Drivers", description: "Top-tier pay, modern 2022+ Freightliner fleet, and flexible home time guaranteed.", buttonIcon: Truck, imageSrc: "http://img.b2bpic.net/free-photo/doctor-provides-cancer-screening-guidance-patient-office_482257-126373.jpg" },
-        { title: "For Dispatchers", description: "High-volume load boards, performance-based commissions, and industry-leading TMS tools.", buttonIcon: LayoutDashboard, imageSrc: "http://img.b2bpic.net/free-photo/close-up-photovoltaics-factory-expert-conducting-experiments-using-tablet_482257-117956.jpg" },
-        { title: "Modern Equipment", description: "We maintain top-of-the-line Dry Vans and Reefers for efficient long-haul journeys.", buttonIcon: Wrench, imageSrc: "http://img.b2bpic.net/free-photo/african-american-female-courier-unloading-packages-from-delivery-truck_637285-2169.jpg" },
-        { title: "Tech-First Dispatch", description: "Utilize advanced TMS tools to manage high-volume routes with ease and precision.", buttonIcon: Cpu, imageSrc: "http://img.b2bpic.net/free-photo/truck-loading-port_1127-374.jpg" },
+        { title: "For CDL Drivers", description: "Top-tier pay, modern 2022+ Freightliner fleet, and flexible home time guaranteed.", buttonIcon: Truck, buttonHref: "/join-now", imageSrc: "http://img.b2bpic.net/free-photo/doctor-provides-cancer-screening-guidance-patient-office_482257-126373.jpg" },
+        { title: "For Dispatchers", description: "High-volume load boards, performance-based commissions, and industry-leading TMS tools.", buttonIcon: LayoutDashboard, buttonHref: "/join-now", imageSrc: "http://img.b2bpic.net/free-photo/close-up-photovoltaics-factory-expert-conducting-experiments-using-tablet_482257-117956.jpg" },
+        { title: "Modern Equipment", description: "We maintain top-of-the-line Dry Vans and Reefers for efficient long-haul journeys.", buttonIcon: Wrench, buttonHref: "/join-now", imageSrc: "http://img.b2bpic.net/free-photo/african-american-female-courier-unloading-packages-from-delivery-truck_637285-2169.jpg" },
+        { title: "Tech-First Dispatch", description: "Utilize advanced TMS tools to manage high-volume routes with ease and precision.", buttonIcon: Cpu, buttonHref: "/join-now", imageSrc: "http://img.b2bpic.net/free-photo/truck-loading-port_1127-374.jpg" },
       ]}
       title="Dual-Path Careers"
       description="Explore roles that fit your expertise and goals."
@@ -144,7 +144,7 @@ export default function LandingPage() {
         { id: "q1", title: "What equipment do you operate?", content: "We primarily operate 2022+ Freightliners, alongside a well-maintained fleet of Dry Vans and Reefers." },
         { id: "q2", title: "Are you partnered with Amazon Relay?", content: "Yes, we are a proud Amazon Relay partner, specializing in high-efficiency Drop & Hook freight." },
         { id: "q3", title: "What are the driver perks?", content: "Top-tier pay, newer equipment, and flexible home-time policies designed with driver well-being in mind." },
-        { id: "q4", title: "How do I apply?", content: "Simply click the 'Drive for Us' button on our page, and fill out our streamlined contact form for a recruiter to get in touch." },
+        { id: "q4", title: "How do I apply?", content: "Simply click the 'Join Now' button on our page, and fill out our streamlined contact form for a recruiter to get in touch." },
       ]}
       imageSrc="http://img.b2bpic.net/free-photo/abstract-blur-shipping-crane-cargo-background_74190-4276.jpg"
       title="Common Questions"
@@ -174,7 +174,7 @@ export default function LandingPage() {
       columns={[
         { title: "Company", items: [{ label: "About Us", href: "#about" }, { label: "Careers", href: "#feature" }] },
         { title: "Resources", items: [{ label: "FAQ", href: "#faq" }, { label: "Compliance", href: "#" }] },
-        { title: "Contact", items: [{ label: "Join Now", href: "#contact" }] },
+        { title: "Contact", items: [{ label: "Join Now", href: "/join-now" }] },
       ]}
       copyrightText="© 2025 UTlogistics. MC# 123456 | DOT# 654321"
     />
